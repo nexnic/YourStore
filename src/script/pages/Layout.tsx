@@ -2,13 +2,13 @@ import Navigation from './Navigation'
 import Footer from './Footer'
 
 
-export default function Layout(){
+export default function Layout({pageConfig}){
 
     
     return (
        <>
-        <Navigation/>
-        <Footer/>
+        <Navigation pageConfig={pageConfig}/>
+        <Footer pageConfig={pageConfig}/>
         </>
     )
 }
