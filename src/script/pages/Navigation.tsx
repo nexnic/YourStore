@@ -9,7 +9,7 @@ export default function Navigation({pageConfig}) {
     const {pageName} = pageConfig
     console.log(pageName)
     return(
-        <div className="navBar">
+        <nav className="navBar">
                 <div className="navBar__top">
                     <div>
                         <h1>{pageName}</h1>
@@ -28,6 +28,6 @@ export default function Navigation({pageConfig}) {
                         </li>
                     </ul>
                 </div>
-        </div>
+        </nav>
     )
 }
