@@ -4,12 +4,15 @@
 import Input from '../Components/Input'
 
 
-export default function Navigation() {
+export default function Navigation({pageConfig}) {
+
+    const {pageName} = pageConfig
+    console.log(pageName)
     return(
         <div className="navBar">
                 <div className="navBar__top">
                     <div>
-                        <h1>YourName</h1>
+                        <h1>{pageName}</h1>
                     </div>
                     <div>
                         <Input Class={'navbar__search'} Type={'text'} PlaceHolder={'Search...'}/>
