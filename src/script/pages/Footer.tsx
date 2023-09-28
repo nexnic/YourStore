@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 
-export default function Footer() {
+export default function Footer({pageConfig}) {
+    const {pageName, pageSlogen } =pageConfig
     return (
             <footer className="footer">
                 <div>
-                    <h3>YourName</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <h3>{pageName}</h3>
+                    <p>{pageSlogen}</p>
                 </div>
                 <div>
                     <ul>
