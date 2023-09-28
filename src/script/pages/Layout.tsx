@@ -1,12 +1,14 @@
 import Navigation from './Navigation'
+import Footer from './Footer'
 
 
 export default function Layout(){
 
     
     return (
-        <div>
-            <Navigation/>
-        </div>
+       <>
+        <Navigation/>
+        <Footer/>
+        </>
     )
 }
