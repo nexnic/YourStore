@@ -9,9 +9,7 @@ const pageConfig= {
     pageName: 'YourStore',
     pageSlogen: 'Your One-Stop Online Shop for All Your Needs.',
     logo: null,
-
-
-
+    headerBackgroundImage: null,
 
 }
 
