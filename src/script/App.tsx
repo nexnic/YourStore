@@ -1,10 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
+import { useState } from "react";
 // Import Page Config
 import HomePage from './pages/Home';
 import PageNotFound from './pages/PageNotFound';
 import Layout from './pages/Layout';
-import { useState } from "react";
 
 const pageConfig= {
     pageName: 'YourStore',
@@ -45,16 +44,35 @@ const templetData = {
 
 export default function App() {
     const [storeItem] = useState(templetData)
+    const [cart, setCart] = useState([])
     //const [loading, setLoading] = useState(false)
     //const [error, setError] = useState(false)
     //const [errorMsg, setErrorMsg] =useState([])
+
+    // id
+    function handlerAddToCart(product) {
+        const existingProduct = cart.find((item) => item.id === product.id);
+
+        if(existingProduct) {
+            const updateCart = cart.map((item) => {
+                if(item.id === product.id) {
+                    item.quantity += 1;
+                }
+                return item;
+            });
+            setCart(updateCart)
+        }else {
+            const productWithQuantity = { ...product, quantity: 1};
+            setCart([...cart, productWithQuantity]);
+        }
+    }
 
 
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Layout pageConfig={pageConfig}/>}>
-                    <Route index element={<HomePage storeItem={storeItem}/>} />
+                <Route path="/" element={<Layout pageConfig={pageConfig} cart={cart}/>}>
+                    <Route index element={<HomePage storeItem={storeItem} onSelectAddCart={handlerAddToCart}/>} />
                     <Route path="*" element={<PageNotFound />} />
                 </Route>
             </Routes>
