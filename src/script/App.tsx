@@ -68,13 +68,12 @@ export default function App() {
     }
 
     function handlerEmptyCart() {
-        console.log('testing empty array')
         setCart([])
     }
 
-    function handlerRemoveItemFromCart() {
-        console.log('test')
-        
+    function handlerRemoveItemFromCart(productid) {
+        const removeFromCart = cart.filter((item) => item.id !== productid )
+        setCart(removeFromCart)
     }
 
 
