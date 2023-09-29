@@ -1,0 +1,38 @@
+.container {
+    margin: auto;
+    width: 80%;
+}
+
+.cart {
+    margin: 20px 0;
+    float: right;
+    background-color: white;
+    width: 320px;
+    position: relative;
+    border-radius: 3px;
+    padding: 20px;
+
+    &__header {
+        border-bottom: 1px solid #e8e8e8;
+        padding-bottom: 15px;
+
+    }
+    &__items {
+        padding-top: 20px;
+
+    }
+
+    &::after{
+        bottom: 100%;
+        left: 89%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-bottom-color: white;
+        border-width: 8px;
+        margin-left: -8px;
+    }
+}
