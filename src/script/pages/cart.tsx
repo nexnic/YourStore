@@ -1,7 +1,7 @@
 import { useState } from "react"
 import Button from "../Components/Button"
 
-export default function Cart({cart}){
+export default function Cart({cart, onSelectEmptyCart}){
     const [showCart,setShowCart] = useState(false)
     console.log(cart)
 
@@ -13,12 +13,12 @@ export default function Cart({cart}){
     return (
         <div>
             <Button Class={'btn'} Type={'button'} onClick={handleShowCart}>cart</Button>
-            {showCart && <CartOpen cart={cart}/>}
+            {showCart && <CartOpen cart={cart} onSelectEmptyCart={onSelectEmptyCart}/>}
         </div>
     )
 }
 
-function CartOpen ({cart}) {
+function CartOpen ({cart, onSelectEmptyCart}) {
     return (
         <div className="container">
             <div className="cart">
@@ -30,6 +30,9 @@ function CartOpen ({cart}) {
                         <CartList item={item} key={item.id}/>
                     ))}
                 </ul>
+                <div className="cart__buttom">
+                    <Button onClick={onSelectEmptyCart}>Empty Cart</Button>
+                </div>
             </div>
         </div>
     )
@@ -44,6 +47,7 @@ function CartList ({item}) {
             <span className="item__name">{title}</span>
             <span className="item__price">{price}</span>
             <span className="item__quantity">Quantity: {quantity}</span>
+            <Button>&#10005;</Button>
         </li>
     )
 }
