@@ -1,6 +1,6 @@
 import Button from '../Components/Button'
 
-export default function Card ({storeItem}){
+export default function Card ({storeItem, onSelectAddCart}){
     const {id, imageUrl, title, price} = storeItem
 
 
@@ -10,7 +10,7 @@ export default function Card ({storeItem}){
             <div className="card__text">
                 <h3>{title}</h3>
                 <small>{price}</small>
-                <Button Class={'btn__buy'} Type='button'>Buy</Button>
+                <Button Class={'btn__buy'} Type='button' onClick={()=> onSelectAddCart(storeItem)}>Buy</Button>
             </div>
         </div>
     )
