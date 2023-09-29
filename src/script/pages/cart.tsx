@@ -19,6 +19,9 @@ export default function Cart({cart, onSelectEmptyCart,onSelectCartRemoveItem}){
 }
 
 function CartOpen ({cart, onSelectEmptyCart, onSelectCartRemoveItem}) {
+    const cartLen = cart.length 
+    console.log(cartLen)
+
     return (
         <div className="container">
             <div className="cart">
@@ -26,12 +29,13 @@ function CartOpen ({cart, onSelectEmptyCart, onSelectCartRemoveItem}) {
                     <h4>Cart</h4>
                 </div>
                 <ul className="cart__items">
-                    {cart.map((item)=> (
+                    {cartLen ?  cart.map((item)=> (
                         <CartList item={item} key={item.id} onSelectCartRemoveItem={onSelectCartRemoveItem}/>
-                    ))}
+                    )): <p>Empty Cart</p> }
                 </ul>
                 <div className="cart__buttom">
-                    <Button onClick={onSelectEmptyCart}>Empty Cart</Button>
+                    {cartLen ? <Button onClick={onSelectEmptyCart}>Empty Cart</Button>  : null}
+                    {cartLen ?<Button>Checkout</Button> : null}
                 </div>
             </div>
         </div>
