@@ -1,3 +1,5 @@
+import Button from '../Components/Button'
+
 export default function Card ({storeItem}){
     const {id, imageUrl, title, price} = storeItem
 
@@ -8,7 +10,7 @@ export default function Card ({storeItem}){
             <div className="card__text">
                 <h3>{title}</h3>
                 <small>{price}</small>
-                <button className="btn__buy" type="button">Buy</button>
+                <Button Class={'btn__buy'} Type='button'>Buy</Button>
             </div>
         </div>
     )
