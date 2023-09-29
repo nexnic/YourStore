@@ -2,7 +2,7 @@
     // Reach
         import { Link } from "react-router-dom";
 import Input from '../Components/Input'
-
+import Cart from "./cart";
 
 export default function Navigation({pageConfig}) {
 
@@ -17,9 +17,7 @@ export default function Navigation({pageConfig}) {
                     <div>
                         <Input Class={'navbar__search'} Type={'text'} PlaceHolder={'Search...'}/>
                     </div>
-                    <div>
-                        <i className="fa-solid fa-cart-shopping"></i>
-                    </div>
+                    <Cart/>
                 </div>
                 <div className="navBar__bottom">
                     <ul>
