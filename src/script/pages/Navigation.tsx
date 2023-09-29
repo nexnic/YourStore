@@ -4,7 +4,7 @@
 import Input from '../Components/Input'
 import Cart from "./cart";
 
-export default function Navigation({pageConfig, cartItem}) {
+export default function Navigation({pageConfig, cart}) {
 
     const {pageName} = pageConfig
     console.log(pageName)
@@ -17,7 +17,7 @@ export default function Navigation({pageConfig, cartItem}) {
                     <div>
                         <Input Class={'navbar__search'} Type={'text'} PlaceHolder={'Search...'}/>
                     </div>
-                    <Cart cartItem={cartItem}/>
+                    <Cart cart={cart}/>
                 </div>
                 <div className="navBar__bottom">
                     <ul>
