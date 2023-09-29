@@ -67,11 +67,16 @@ export default function App() {
         }
     }
 
+    function handlerEmptyCart() {
+        console.log('testing empty array')
+        setCart([])
+    }
+
 
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Layout pageConfig={pageConfig} cart={cart}/>}>
+                <Route path="/" element={<Layout pageConfig={pageConfig} cart={cart} onSelectEmptyCart={handlerEmptyCart}/>}>
                     <Route index element={<HomePage storeItem={storeItem} onSelectAddCart={handlerAddToCart}/>} />
                     <Route path="*" element={<PageNotFound />} />
                 </Route>
