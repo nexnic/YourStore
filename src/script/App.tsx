@@ -72,11 +72,16 @@ export default function App() {
         setCart([])
     }
 
+    function handlerRemoveItemFromCart() {
+        console.log('test')
+        
+    }
+
 
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Layout pageConfig={pageConfig} cart={cart} onSelectEmptyCart={handlerEmptyCart}/>}>
+                <Route path="/" element={<Layout pageConfig={pageConfig} cart={cart} onSelectEmptyCart={handlerEmptyCart} onSelectCartRemoveItem={handlerRemoveItemFromCart}/>}>
                     <Route index element={<HomePage storeItem={storeItem} onSelectAddCart={handlerAddToCart}/>} />
                     <Route path="*" element={<PageNotFound />} />
                 </Route>
