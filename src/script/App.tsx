@@ -68,15 +68,19 @@ export default function App() {
     }
 
     function handlerEmptyCart() {
-        console.log('testing empty array')
         setCart([])
+    }
+
+    function handlerRemoveItemFromCart(productid) {
+        const removeFromCart = cart.filter((item) => item.id !== productid )
+        setCart(removeFromCart)
     }
 
 
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Layout pageConfig={pageConfig} cart={cart} onSelectEmptyCart={handlerEmptyCart}/>}>
+                <Route path="/" element={<Layout pageConfig={pageConfig} cart={cart} onSelectEmptyCart={handlerEmptyCart} onSelectCartRemoveItem={handlerRemoveItemFromCart}/>}>
                     <Route index element={<HomePage storeItem={storeItem} onSelectAddCart={handlerAddToCart}/>} />
                     <Route path="*" element={<PageNotFound />} />
                 </Route>

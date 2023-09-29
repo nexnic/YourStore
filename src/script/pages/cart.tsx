@@ -1,7 +1,7 @@
 import { useState } from "react"
 import Button from "../Components/Button"
 
-export default function Cart({cart, onSelectEmptyCart}){
+export default function Cart({cart, onSelectEmptyCart,onSelectCartRemoveItem}){
     const [showCart,setShowCart] = useState(false)
     console.log(cart)
 
@@ -13,12 +13,12 @@ export default function Cart({cart, onSelectEmptyCart}){
     return (
         <div>
             <Button Class={'btn'} Type={'button'} onClick={handleShowCart}>cart</Button>
-            {showCart && <CartOpen cart={cart} onSelectEmptyCart={onSelectEmptyCart}/>}
+            {showCart && <CartOpen cart={cart} onSelectEmptyCart={onSelectEmptyCart} onSelectCartRemoveItem={onSelectCartRemoveItem}/>}
         </div>
     )
 }
 
-function CartOpen ({cart, onSelectEmptyCart}) {
+function CartOpen ({cart, onSelectEmptyCart, onSelectCartRemoveItem}) {
     return (
         <div className="container">
             <div className="cart">
@@ -27,7 +27,7 @@ function CartOpen ({cart, onSelectEmptyCart}) {
                 </div>
                 <ul className="cart__items">
                     {cart.map((item)=> (
-                        <CartList item={item} key={item.id}/>
+                        <CartList item={item} key={item.id} onSelectCartRemoveItem={onSelectCartRemoveItem}/>
                     ))}
                 </ul>
                 <div className="cart__buttom">
@@ -38,16 +38,15 @@ function CartOpen ({cart, onSelectEmptyCart}) {
     )
 }
 
-function CartList ({item}) {
-    const {title,imageUrl ,price, quantity} = item
-    console.log(item.title)
+function CartList ({item, onSelectCartRemoveItem}) {
+    const {title,imageUrl ,price, quantity,id} = item
     return (
         <li>
             <img src={imageUrl} alt={title}/>
             <span className="item__name">{title}</span>
             <span className="item__price">{price}</span>
             <span className="item__quantity">Quantity: {quantity}</span>
-            <Button>&#10005;</Button>
+            <Button onClick={() =>onSelectCartRemoveItem(id)}>x</Button>
         </li>
     )
 }
