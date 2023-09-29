@@ -3,12 +3,12 @@ import Footer from './Footer'
 import { Outlet} from "react-router-dom";
 
 
-export default function Layout({pageConfig, cartItem}){
+export default function Layout({pageConfig, cart}){
 
     
     return (
        <>
-        <Header pageConfig={pageConfig} cartItem={cartItem}/>
+        <Header pageConfig={pageConfig} cart={cart}/>
         <Outlet/>
         <Footer pageConfig={pageConfig}/>
         
