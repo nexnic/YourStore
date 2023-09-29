@@ -46,7 +46,7 @@ function CartList ({item, onSelectCartRemoveItem}) {
             <span className="item__name">{title}</span>
             <span className="item__price">{price}</span>
             <span className="item__quantity">Quantity: {quantity}</span>
-            <Button onClick={onSelectCartRemoveItem(id)}>x</Button>
+            <Button onClick={() =>onSelectCartRemoveItem(id)}>x</Button>
         </li>
     )
 }
