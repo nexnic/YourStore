@@ -3,7 +3,7 @@ import Button from "./Button"
 
 export default function Cart({cart, onSelectEmptyCart,onSelectCartRemoveItem}){
     const [showCart,setShowCart] = useState(false)
-    console.log(cart)
+  
 
     function handleShowCart () {
         setShowCart((show) => !show)
@@ -20,7 +20,6 @@ export default function Cart({cart, onSelectEmptyCart,onSelectCartRemoveItem}){
 
 function CartOpen ({cart, onSelectEmptyCart, onSelectCartRemoveItem}) {
     const cartLen = cart.length 
-    console.log(cartLen)
 
     return (
         <div className="container">
