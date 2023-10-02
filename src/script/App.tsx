@@ -3,7 +3,9 @@ import { useState } from "react";
 // Import Page Config
 import HomePage from './pages/Home/Home';
 import PageNotFound from './pages/PageNotFound/PageNotFound';
+import CheckoutPage from "./pages/Checkout/Checkout";
 import Layout from './pages/Layout/Layout';
+
 
 const pageConfig= {
     pageName: 'YourStore',
@@ -574,6 +576,7 @@ export default function App() {
                 <Route path="/" element={<Layout pageConfig={pageConfig} cart={cart} onSelectEmptyCart={handlerEmptyCart} onSelectCartRemoveItem={handlerRemoveItemFromCart}/>}>
                     <Route index element={<HomePage storeItem={storeItem} onSelectAddCart={handlerAddToCart}/>} />
                     <Route path="*" element={<PageNotFound />} />
+                    <Route path="/checkout" element={<CheckoutPage cart={cart}/>} />
                 </Route>
             </Routes>
         </BrowserRouter>
