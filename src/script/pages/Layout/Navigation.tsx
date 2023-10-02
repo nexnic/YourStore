@@ -8,7 +8,6 @@ import HamburgerMenu from "../../Components/hamburgermenu";
 export default function Navigation({pageConfig, cart, onSelectEmptyCart, onSelectCartRemoveItem}) {
 
     const {pageName} = pageConfig
-    console.log(pageName)
     return(
         <nav className="navBar">
                 <div className="navBar__top">
@@ -25,6 +24,9 @@ export default function Navigation({pageConfig, cart, onSelectEmptyCart, onSelec
                     <ul>
                         <li>
                             <Link to="/" className="link__navbar">Home</Link>
+                        </li>
+                        <li>
+                            <Link to="/checkout" className="link__navbar">Checkout</Link>
                         </li>
                     </ul>
                 </div>
