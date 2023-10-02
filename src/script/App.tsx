@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 // Import Page Config
-import HomePage from './pages/Home';
-import PageNotFound from './pages/PageNotFound';
-import Layout from './pages/Layout';
+import HomePage from './pages/Home/Home';
+import PageNotFound from './pages/PageNotFound/PageNotFound';
+import Layout from './pages/Layout/Layout';
 
 const pageConfig= {
     pageName: 'YourStore',

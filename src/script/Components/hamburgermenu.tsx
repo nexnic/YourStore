@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import Button from "../Components/Button";
+import Button from "./Button";
 
 export default function HamburgerMenu() {
     const [statusMenu, setStatusMenu] = useState(false)
