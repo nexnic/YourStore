@@ -1,9 +1,9 @@
 // Import 
     // Reach
         import { Link } from "react-router-dom";
-import Input from '../Components/Input'
-import Cart from "./cart";
-import HamburgerMenu from "./hamburgermenu";
+import Input from '../../Components/Input'
+import Cart from "../../Components/cart";
+import HamburgerMenu from "../../Components/hamburgermenu";
 
 export default function Navigation({pageConfig, cart, onSelectEmptyCart, onSelectCartRemoveItem}) {
 
