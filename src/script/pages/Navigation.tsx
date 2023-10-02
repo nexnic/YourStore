@@ -3,6 +3,7 @@
         import { Link } from "react-router-dom";
 import Input from '../Components/Input'
 import Cart from "./cart";
+import HamburgerMenu from "./hamburgermenu";
 
 export default function Navigation({pageConfig, cart, onSelectEmptyCart, onSelectCartRemoveItem}) {
 
@@ -18,6 +19,7 @@ export default function Navigation({pageConfig, cart, onSelectEmptyCart, onSelec
                         <Input Class={'navbar__search'} Type={'text'} PlaceHolder={'Search...'}/>
                     </div>
                     <Cart cart={cart} onSelectEmptyCart={onSelectEmptyCart} onSelectCartRemoveItem={onSelectCartRemoveItem}/>
+                    <HamburgerMenu />
                 </div>
                 <div className="navBar__bottom">
                     <ul>
