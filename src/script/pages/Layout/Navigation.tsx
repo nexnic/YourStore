@@ -28,6 +28,9 @@ export default function Navigation({pageConfig, cart, onSelectEmptyCart, onSelec
                         <li>
                             <Link to="/checkout" className="link__navbar">Checkout</Link>
                         </li>
+                        <li>
+                        <Link to="/Aboutus" className="link__navbar">About Use</Link>
+                        </li>
                     </ul>
                 </div>
         </nav>
