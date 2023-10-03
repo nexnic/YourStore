@@ -2,8 +2,12 @@ export default function ProductHeading ({items}) {
 
     return (
         <div>
-            <h1>{items.title}</h1>
-            <p>{items.description}</p>
+            <div>
+                <h2>{items.title}</h2>
+                <p>{items.description}</p>
+                <small>Item number: {items.id}</small>
+            </div>
+           
             <img src={items.imageUrl} alt={items.title}/>
         </div>
     )
