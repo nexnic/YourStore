@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom"
 
 import ProductHeading from "./Components/ProductHeading";
 import ProductMainInfo from './Components/ProductMainInfo';
+import ProductSpec from './Components/ProductSpec';
 
 
 export default function ProductPage () {
@@ -31,14 +32,12 @@ export default function ProductPage () {
     if(isLoading){
         <div>Loading</div>
     }
-    if(isError){
-        <div>Error</div>
-    }
 
     return (
         <div>
-            <ProductHeading items={items}/>
+            <ProductHeading items={items} />
             <ProductMainInfo items={items} />
+            <ProductSpec items={items} />
         </div>
     )
 }
