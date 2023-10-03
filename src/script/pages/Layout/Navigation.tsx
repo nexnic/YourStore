@@ -31,6 +31,9 @@ export default function Navigation({pageConfig, cart, onSelectEmptyCart, onSelec
                         <li>
                         <Link to="/Aboutus" className="link__navbar">About Use</Link>
                         </li>
+                        <li>
+                            <Link to='/ContactUs' className="link__navbar">Contact Us</Link>
+                        </li>
                     </ul>
                 </div>
         </nav>

@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 // Import Page Config
 import AboutusPage from "./pages/AboutUs/AboutUsPage";
+import ContactUspage from './pages/ContantUs/ContactUsPage'
 import HomePage from './pages/Home/Home';
 import PageNotFound from './pages/PageNotFound/PageNotFound';
 import CheckoutPage from "./pages/Checkout/Checkout";
@@ -58,7 +59,8 @@ export default function App() {
             <Routes>
                 <Route path="/" element={<Layout pageConfig={pageConfig} cart={cart} onSelectEmptyCart={handlerEmptyCart} onSelectCartRemoveItem={handlerRemoveItemFromCart}/>}>
                     <Route index element={<HomePage onSelectAddCart={handlerAddToCart}/>} />
-                    <Route path="Aboutus" element={<AboutusPage />} />
+                    <Route path="/Aboutus" element={<AboutusPage />} />
+                    <Route path="/ContactUs" element={<ContactUspage />}/>
                     <Route path="/product/:id" element={<ProductPage />} />
                     <Route path="/checkout" element={<CheckoutPage cart={cart}/>} />
                     <Route path="*" element={<PageNotFound />} />
