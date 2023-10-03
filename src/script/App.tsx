@@ -19,7 +19,6 @@ const pageConfig= {
 
 
 export default function App() {
-    const [storeItem] = useState(templetData)
     const [cart, setCart] = useState([])
     //const [loading, setLoading] = useState(false)
     //const [error, setError] = useState(false)
@@ -57,7 +56,7 @@ export default function App() {
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Layout pageConfig={pageConfig} cart={cart} onSelectEmptyCart={handlerEmptyCart} onSelectCartRemoveItem={handlerRemoveItemFromCart}/>}>
-                    <Route index element={<HomePage storeItem={storeItem} onSelectAddCart={handlerAddToCart}/>} />
+                    <Route index element={<HomePage onSelectAddCart={handlerAddToCart}/>} />
                     <Route path="/product/:id" element={<ProductPage />} />
                     <Route path="/checkout" element={<CheckoutPage cart={cart}/>} />
                     <Route path="*" element={<PageNotFound />} />
