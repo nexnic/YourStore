@@ -37,9 +37,11 @@ export default function HomePage({onSelectAddCart}) {
     )
   }
   return (
-    <div>
-      <ProductList items={items} onSelectAddCart={onSelectAddCart}/>
-    </div>
+    <main>
+      <div>
+        <ProductList items={items} onSelectAddCart={onSelectAddCart}/>
+      </div>
+    </main>
   )
   
 }
