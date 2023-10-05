@@ -10,13 +10,52 @@ import ProductPage from './pages/ProductPage/ProductPage'
 import Layout from './pages/Layout/Layout';
 
 
-const pageConfig= {
-    pageName: 'YourStore',
-    pageSlogen: 'Your One-Stop Online Shop for All Your Needs.',
-    logo: null,
-    headerBackgroundImage: null,
+const pageConfig = [
+    {
+        CompanyName: 'YourStore',
+        CompanySlogen: 'Your One-Stop Online Shop for All Your Needs.',
+        email: 'post@yourstore.no',
+        telefon: '3322 2222',
+        logo: null,
+        headerBackgroundImage: null,
+        address:{
+            street: 'Ensjøveien 5',
+            city: 'Oslo',
+            code: '0655',
+            country: 'norway'
+        },
+        openHours: {
+            Monday: {
+                open: 12,
+                close: 18,
+            },
+            Tuesday: {
+                open: 12,
+                close: 18,
+            },
+            Wednesday: {
+                open: 11,
+                close: 17,
+            },
+            Thursday: {
+                open: 12,
+                close: 18,
+            },
+            Friday: {
+                open: 10,
+                close: 16,
+            },
+            Saturday: false,
+            Sunday: false,
+        },
+    }
+    
 
-}
+    
+
+    
+
+]
 
 
 

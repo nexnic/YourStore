@@ -1,12 +1,17 @@
 import { Link } from "react-router-dom";
 
+
 export default function Footer({pageConfig}) {
-    const {pageName, pageSlogen } =pageConfig
+    
+    console.log(pageConfig)
+
+
+
     return (
             <footer className="footer">
                 <div>
-                    <h3>{pageName}</h3>
-                    <p>{pageSlogen}</p>
+                    <h3>{}</h3>
+                    <p>{}</p>
                 </div>
                 <div>
                     <ul>
@@ -25,6 +30,7 @@ export default function Footer({pageConfig}) {
                             <Link to="*" className="link__footer"> Sale</Link>
                         </li>
                     </ul>
+                    
                 </div>
             </footer>
     )
