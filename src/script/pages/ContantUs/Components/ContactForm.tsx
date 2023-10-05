@@ -1,4 +1,4 @@
-import Form from './Form'
+
 
 export default function ContactForm() {
     return (
@@ -9,7 +9,6 @@ export default function ContactForm() {
                 <p>We value your feedback and look forward to assisting you. Your satisfaction is our top priority, and we're committed to making your shopping experience with us exceptional.</p>
                 <p>Thank you for choosing [Your Company Name]. We appreciate your trust in us and are here to serve you.</p>
             </div>
-            <Form></Form>
             <div>
                 
             </div>
