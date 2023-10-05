@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import LoadingScreen from '../../Components/LoadingScreen'
 import ProductList from '../../Components/ProductList'
 
-export default function HomePage() {
+export default function HomePage({onSelectAddCart}) {
   const [items , setItems] = useState([])
   const [isLoading, setIsLoading] = useState(true)
 
@@ -38,7 +38,7 @@ export default function HomePage() {
   }
   return (
     <div>
-      <ProductList items={items} />
+      <ProductList items={items} onSelectAddCart={onSelectAddCart}/>
     </div>
   )
   
