@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import LoadingScreen from '../../Components/LoadingScreen'
-import ProductList from '../../Components/ProductList'
+import Main from "./Components/Main";
+
 
 export default function HomePage({onSelectAddCart}) {
-  const [items , setItems] = useState([])
+  const [products , setProducts] = useState([])
   const [isLoading, setIsLoading] = useState(true)
+
 
   useEffect(() => {
     async function getItem() {
@@ -13,7 +15,7 @@ export default function HomePage({onSelectAddCart}) {
         const json = await response.json()
 
         if(response.status === 200){
-          setItems(...[json])
+          setProducts(...[json])
           setIsLoading(false)
         }
         if(response.status === 300 >= 400){
@@ -28,6 +30,8 @@ export default function HomePage({onSelectAddCart}) {
     getItem() 
   }, [])
 
+  
+
 
   if(isLoading) {
     return (
@@ -37,9 +41,9 @@ export default function HomePage({onSelectAddCart}) {
     )
   }
   return (
-    <div>
-      <ProductList items={items} onSelectAddCart={onSelectAddCart}/>
-    </div>
+    <>
+    <Main products={products} key={products.id} onSelectAddCart={onSelectAddCart}/>
+    </>
   )
   
 }
