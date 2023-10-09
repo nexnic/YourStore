@@ -1,6 +1,6 @@
 
-import CheckoutDetailts from './CheckoutDetails'
-import CheckoutList from './CheckoutList'
+import CheckoutDetailts from './Components/CheckoutDetails'
+import CheckoutList from './Components/CheckoutList'
 
 export default function CheckoutPage({cart}) {
 
@@ -9,7 +9,6 @@ export default function CheckoutPage({cart}) {
             <section className='Checkout__productList'>
             <CheckoutDetailts/>
             <CheckoutList cart={cart}/> 
-
             </section>
         </main>
     )
