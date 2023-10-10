@@ -1,0 +1,13 @@
+.main {
+    min-height: 50vh;
+    &__home {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 10%;
+        gap: 2rem;
+        justify-content: center;
+        align-items: normal;
+        align-content: center;
+    }
+}
