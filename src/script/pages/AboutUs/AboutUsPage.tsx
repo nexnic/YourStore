@@ -3,9 +3,11 @@ import Team from '../AboutUs/Components/Team'
 
 export default function AboutusPage() {
     return (
-        <div>
+        <main className="main__aboutus">
             <Story/>
             <Team/>
-        </div>
+        </main>
+            
+       
     )
 }
