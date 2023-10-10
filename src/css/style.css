@@ -29,6 +29,12 @@ body {
   color: #DF4C73;
 }
 
+.headline__card {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.2rem;
+  color: #DF4C73;
+}
+
 .btn__primary {
   font-family: "Open Sans", sans-serif;
   font-weight: bold;
@@ -44,6 +50,27 @@ body {
   -webkit-box-shadow: 0px 1px 3px #9E3652;
   -moz-box-shadow: 0px 1px 3px #9E3652;
   box-shadow: 0px 1px 3px #9E3652;
+}
+
+.card {
+  max-width: 300px;
+  margin: 0 auto;
+  border: 3px solid #B3B3B3;
+  -webkit-box-shadow: 0px 7px 22px 11px rgb(209, 209, 209);
+  -moz-box-shadow: 0px 7px 22px 11px rgb(209, 209, 209);
+  box-shadow: 0px 7px 22px 11px rgb(209, 209, 209);
+  background-color: white;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.card__img {
+  width: 100%;
+  height: 214px;
+  object-fit: cover;
+  border-bottom: 3px solid #DF4C73;
+}
+.card__details {
+  text-align: center;
 }
 
 .container {

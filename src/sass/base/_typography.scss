@@ -28,3 +28,12 @@
     }
 
 }
+
+.headline{
+    &__card {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.2rem;
+        color: $tertiary-color;
+        
+    }
+}
