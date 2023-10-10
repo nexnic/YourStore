@@ -7,3 +7,24 @@
     font-size: 2.4rem;
     color: $tertiary-color;
 }
+
+// This is the headline for Site
+
+.heading {
+
+    padding: 5vh;
+    background-color: $transparentColor;
+
+    &__main {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 2.4rem;
+        color: $tertiary-color;
+        
+    }
+    &__sub {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.6rem;
+        color: $tertiary-color;
+    }
+
+}
