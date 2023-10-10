@@ -31,9 +31,9 @@ export default function Main({products, onSelectAddCart}) {
 
     return (
         <main>
-            <div>
-                <input type="text" onChange={handlerSearchInput} onFocus={() =>  setSearching(true)} onBlur={() => setSearching(false)}placeholder="Type to search"/>
-                <select value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
+            <div className="nav__filter">
+                <input type="text" className="input__search" onChange={handlerSearchInput} onFocus={() =>  setSearching(true)} onBlur={() => setSearching(false)}placeholder="Type to search"/>
+                <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="select__filter">
                     <option value='input'>Sort By Input order</option>
                     <option value='pricelow'>Price: Low to High</option>
                     <option value='pricehigh'>Price: High to Low</option>
