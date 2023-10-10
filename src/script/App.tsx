@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
+import '../css/style.css'
 // Import Page Config
 import AboutusPage from "./pages/AboutUs/AboutUsPage";
 import ContactUspage from './pages/ContantUs/ContactUsPage'
