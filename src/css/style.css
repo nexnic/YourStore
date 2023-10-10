@@ -14,6 +14,21 @@ body {
   color: #DF4C73;
 }
 
+.heading {
+  padding: 5vh;
+  background-color: rgba(242, 242, 242, 0.5450980392);
+}
+.heading__main {
+  font-family: "Open Sans", sans-serif;
+  font-size: 2.4rem;
+  color: #DF4C73;
+}
+.heading__sub {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem;
+  color: #DF4C73;
+}
+
 .btn__primary {
   font-family: "Open Sans", sans-serif;
   font-weight: bold;
@@ -75,6 +90,17 @@ body {
   padding: 15px 0;
   text-decoration: none;
   color: #DF4C73;
+}
+
+.header__container {
+  display: flex;
+  min-height: 30vh;
+  max-height: 30vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-position: center;
+  background-size: cover;
 }
 
 .navBar {

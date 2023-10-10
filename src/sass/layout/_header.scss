@@ -1,3 +1,12 @@
 .header {
-    
+    &__container  {
+        display: flex;
+        min-height: 30vh;
+        max-height: 30vh;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+       background-position: center;
+       background-size: cover;
+    }
 }
