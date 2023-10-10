@@ -212,9 +212,6 @@ body {
   box-shadow: 0px 7px 22px 11px rgb(209, 209, 209);
 }
 
-.main {
-  min-height: 50vh;
-}
 .main__home {
   display: flex;
   flex-direction: row;
@@ -224,6 +221,22 @@ body {
   justify-content: center;
   align-items: normal;
   align-content: center;
+}
+.main__aboutus {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: px;
+  grid-row-gap: 0px;
+}
+.main__aboutus--story {
+  grid-area: 1/2/6/4;
+  padding: 1rem;
+}
+.main__aboutus--team {
+  grid-area: 1/4/6/5;
+  padding: 1rem;
 }
 
 *, *::before, *::after {

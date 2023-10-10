@@ -1,6 +1,6 @@
 export default function Story(){
     return (
-        <div>
+        <div className="main__aboutus--story">
             <div>
                 <h2>Our Story</h2>
             </div>

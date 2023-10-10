@@ -1,6 +1,6 @@
 export default function Team() {
     return (
-        <div>
+        <div className="main__aboutus--team">
             <div>
                 <h2>Our Team</h2>
             </div>
