@@ -12,7 +12,7 @@ export default function Cart({cart, onSelectEmptyCart,onSelectCartRemoveItem}){
 
     return (
         <div>
-            <Button Class={'btn'} Type={'button'} onClick={handleShowCart}>cart</Button>
+            <Button Class={'btn__primary'} Type={'button'} onClick={handleShowCart}>cart</Button>
             {showCart && <CartOpen cart={cart} onSelectEmptyCart={onSelectEmptyCart} onSelectCartRemoveItem={onSelectCartRemoveItem}/>}
         </div>
     )
