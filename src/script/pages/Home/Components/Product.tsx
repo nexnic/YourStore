@@ -5,9 +5,9 @@ export default function Product ({item, onSelectAddCart}) {
     const {id, price, title, imageUrl, description} = item
     const navigate = useNavigate();
 
-    function handlereClick(event, id) {
+    function handlereClick(event, id, item) {
        
-        if(event.target.localName === 'button')  onSelectAddCart(id)
+        if(event.target.localName === 'button')  onSelectAddCart(item)
         else navigate(`/product/${id}`);
     }
     
@@ -19,7 +19,7 @@ export default function Product ({item, onSelectAddCart}) {
                 <p>{description}</p>
                 <small>{price}</small>
             </div>
-            <button onClick={() => handlereClick(event, id)}>{price}</button>
+            <button onClick={() => handlereClick(event, id, item)}>{price}</button>
         </div>
     )
 }
