@@ -1,7 +1,7 @@
 export default function CheckoutDetailts () {
 
     return (
-        <div>
+        <div className="checkoutPage__contact">
             <h1>Checkout</h1>
             <div>
                 <h4>Shipping Details</h4>
@@ -22,7 +22,7 @@ export default function CheckoutDetailts () {
                         <input type="number" placeholder="zip-code"/>
                         <label htmlFor=""></label>
                         <input type="text" placeholder="Contry"/>
-                        <button onClick={() => ShippingForm(event)}></button>
+                        <button onClick={() => ShippingForm(event)}>Add</button>
                     </form>
                 </div>
             </div>
@@ -30,7 +30,7 @@ export default function CheckoutDetailts () {
                 <h4>Payment Details</h4>
                 <form action="">
                     <label htmlFor="">
-                    <input type="text"  placeholder="1111 2222 3333 4444"/>
+                    <input type="number"  placeholder="1111 2222 3333 4444"/>
                     </label>
                     <input type="date" name="" id="" />
                     <label htmlFor="">
@@ -43,8 +43,10 @@ export default function CheckoutDetailts () {
     )
 }
 
+
+
 function ShippingForm (event) {
     event.preventDefault()
-    console.log(event)
+
 
 }

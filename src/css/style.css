@@ -160,6 +160,11 @@ body {
   width: 30px;
   object-fit: cover;
 }
+.image__checkout {
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+}
 
 .link__navbar {
   display: inline-block;
@@ -322,6 +327,22 @@ body {
 }
 .footer__info {
   grid-area: 1/5/2/6;
+}
+
+.checkoutPage {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  background-color: white;
+  margin: 0 5rem 0 5rem;
+  padding: 1rem;
+  border-radius: 2%;
+}
+.checkoutPage__contact {
+  flex-basis: 50%;
+}
+.checkoutPage__product {
+  flex-basis: 50%;
 }
 
 *, *::before, *::after {
