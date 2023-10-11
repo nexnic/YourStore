@@ -212,6 +212,10 @@ body {
   box-shadow: 0px 7px 22px 11px rgb(209, 209, 209);
 }
 
+.main {
+  display: flex;
+  justify-content: center;
+}
 .main__home {
   display: flex;
   flex-direction: row;
@@ -237,6 +241,18 @@ body {
 .main__aboutus--team {
   grid-area: 1/4/6/5;
   padding: 1rem;
+}
+.main__product--heading {
+  grid-area: 1/1/2/4;
+}
+.main__product--MainInfo {
+  grid-area: 2/4/4/6;
+}
+.main__product--spec {
+  grid-area: 5/1/6/4;
+}
+.main__product--reviews {
+  grid-area: 4/4/6/6;
 }
 
 .footer {
@@ -269,6 +285,39 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+}
+
+.productPage {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  background-color: white;
+  margin: 0 5rem 0 5rem;
+  padding: 1rem;
+  border-radius: 2%;
+}
+.productPage__heading {
+  flex-basis: 100%;
+  align-self: stretch;
+  order: 1;
+  padding-bottom: 10px;
+}
+.productPage__image {
+  flex-basis: 50%;
+  order: 2;
+}
+.productPage__price {
+  display: inline-flex;
+  flex-direction: column;
+  max-height: 10vh;
+  flex-basis: 30%;
+  border-radius: 2%;
+  padding: 20px;
+  order: 3;
+  background-color: gray;
+}
+.productPage__spec {
+  order: 4;
 }
 
 /*# sourceMappingURL=style.css.map */
