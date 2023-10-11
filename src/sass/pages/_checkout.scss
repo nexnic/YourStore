@@ -1,0 +1,17 @@
+.checkoutPage {
+    display: flex;
+   flex-flow: row;
+   justify-content: space-between;
+   background-color: $bgColor;
+   margin: 0 5rem  0 5rem;
+   padding: 1rem;
+   border-radius: 2%;
+
+   &__contact {
+    flex-basis: 50%;
+   }
+   &__product {
+    flex-basis: 50%;
+   }
+}
+
