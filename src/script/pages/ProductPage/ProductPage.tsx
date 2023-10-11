@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 
 import ProductHeading from "./Components/ProductHeading";
+import ProductImage from './Components/ProductImage';
 import ProductMainInfo from './Components/ProductMainInfo';
 import ProductSpec from './Components/ProductSpec';
 
@@ -34,10 +35,15 @@ export default function ProductPage () {
     }
 
     return (
-        <div>
-            <ProductHeading items={items} />
-            <ProductMainInfo items={items} />
-            <ProductSpec items={items} />
-        </div>
+        <main className="main">
+            <section className="productPage">
+                <ProductHeading items={items} />
+                <ProductImage items={items} />
+                <ProductMainInfo items={items} />
+                <ProductSpec items={items} />
+                <div className="main__product--reviews"></div>
+            </section>
+        </main>
+            
     )
 }

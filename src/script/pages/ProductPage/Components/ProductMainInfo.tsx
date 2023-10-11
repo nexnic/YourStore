@@ -9,7 +9,7 @@ export default function ProductMainInfo({items}){
     console.log(isDiscounted)
 
     return (
-        <div>
+        <div className='productPage__price'>
             {isDiscounted ? <small>{productdiscounted}</small> : null}
             <p>{productPrice}</p>
 
