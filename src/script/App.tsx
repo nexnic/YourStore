@@ -62,12 +62,15 @@ const pageConfig = [
 
 export default function App() {
     const [cart, setCart] = useState([])
+    console.log(cart)
+
     //const [loading, setLoading] = useState(false)
     //const [error, setError] = useState(false)
     //const [errorMsg, setErrorMsg] =useState([])
 
     // id
     function handlerAddToCart(product) {
+        console.log(product)
         const existingProduct = cart.find((item) => item.id === product.id);
 
         if(existingProduct) {
