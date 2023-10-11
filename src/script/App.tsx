@@ -62,7 +62,6 @@ const pageConfig = [
 
 export default function App() {
     const [cart, setCart] = useState([])
-    console.log(cart)
 
     //const [loading, setLoading] = useState(false)
     //const [error, setError] = useState(false)
@@ -70,20 +69,16 @@ export default function App() {
 
     // id
     function handlerAddToCart(product) {
-        console.log(product)
-        const existingProduct = cart.find((item) => item.id === product.id);
-
-        if(existingProduct) {
-            const updateCart = cart.map((item) => {
-                if(item.id === product.id) {
-                    item.quantity += 1;
-                }
-                return item;
-            });
-            setCart(updateCart)
-        }else {
-            const productWithQuantity = { ...product, quantity: 1};
-            setCart([...cart, productWithQuantity]);
+        const productId = product.id;
+        const existingProduct = cart.find(item => item.id === productId);
+        
+        if (existingProduct) {
+            const updatedCart = cart.map(item => 
+              item.id === productId ? { ...item, quantity: item.quantity + 1 } : item
+            );
+            setCart(updatedCart);
+        } else {
+            setCart([...cart, { ...product, quantity: 1 }]);
         }
     }
 

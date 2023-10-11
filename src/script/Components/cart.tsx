@@ -1,9 +1,10 @@
 import { useState } from "react"
 import Button from "./Button"
+import { Link } from "react-router-dom"
 
 export default function Cart({cart, onSelectEmptyCart,onSelectCartRemoveItem}){
     const [showCart,setShowCart] = useState(false)
-  
+    
     
     function handleShowCart () {
         setShowCart((show) => !show)
@@ -20,7 +21,14 @@ export default function Cart({cart, onSelectEmptyCart,onSelectCartRemoveItem}){
 
 function CartOpen ({cart, onSelectEmptyCart, onSelectCartRemoveItem}) {
     const cartLen = cart.length 
-    console.log(cart)
+    const totalPrice = cart.reduce((total, product) => {
+        const priceToUse =
+          product.discountedPrice && product.discountedPrice < product.price
+            ? product.discountedPrice
+            : product.price;
+        return total + priceToUse * product.quantity;
+      }, 0);
+
 
     return (
         <div className="container">
@@ -33,9 +41,13 @@ function CartOpen ({cart, onSelectEmptyCart, onSelectCartRemoveItem}) {
                         <CartList item={item} key={item.id} onSelectCartRemoveItem={onSelectCartRemoveItem}/>
                     )): <p>Empty Cart</p> }
                 </ul>
+                {cartLen ? <div className="cart__price">
+                    <small>Price:</small>
+                    <small>{totalPrice} Nok</small>
+                </div> : null}
                 <div className="cart__buttom">
-                    {cartLen ? <Button onClick={onSelectEmptyCart}>Empty Cart</Button>  : null}
-                    {cartLen ?<Button>Checkout</Button> : null}
+                    {cartLen ? <Button onClick={onSelectEmptyCart} Class='btn__cart'>Empty Cart</Button>  : null}
+                    {cartLen ? <Link to="/Checkout" className="btn__cart">Checkout</Link> : null}
                 </div>
             </div>
         </div>
@@ -43,14 +55,13 @@ function CartOpen ({cart, onSelectEmptyCart, onSelectCartRemoveItem}) {
 }
 
 function CartList ({item, onSelectCartRemoveItem}) {
-    const {title,imageUrl ,price, quantity,id} = item
+    const {title,imageUrl , quantity,id} = item
     return (
-        <li>
-            <img src={imageUrl} alt={title}/>
-            <span className="item__name">{title}</span>
-            <span className="item__price">{price}</span>
+        <li className="cart__item">
+            <img src={imageUrl} alt={title} className="image__cart"/>
+            <span className="item__name">{title} </span>
             <span className="item__quantity">Quantity: {quantity}</span>
-            <Button onClick={() =>onSelectCartRemoveItem(id)}>x</Button>
+            <Button onClick={() =>onSelectCartRemoveItem(id)} Class='btn__remove'>x</Button>
         </li>
     )
 }
