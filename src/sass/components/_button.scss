@@ -33,5 +33,18 @@
         background-color: $tertiary-color;
     }
 
+    &__buy {
+        font-family: 'Open Sans', sans-serif;
+        padding: .2em 1em;
+        color: white;
+        border-radius: 2px;
+        border: 1px solid $tertiary-color-dark;
+        background-color: $tertiary-color;
+
+        &:focus {
+            background-color: green;
+        }
+    }
+
 
 }

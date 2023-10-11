@@ -1,22 +1,42 @@
 .card {
+    display: flex;
+    position: relative;
+    flex-direction: column;
     max-width: 300px;
     margin: 0 auto;
-    border: 3px solid $grayColor;
+    border: 2px solid $bgColor-secondary;
     -webkit-box-shadow: 0px 7px 22px 11px rgba(209,209,209,1);
     -moz-box-shadow: 0px 7px 22px 11px rgba(209,209,209,1);
     box-shadow: 0px 7px 22px 11px rgba(209,209,209,1);
     background-color: $bgColor;
-    border-radius: 30px;
+    border-radius: 5px;
     overflow: hidden;
+    
+    &__sale {
+        position: absolute;
+        text-align: start;
+        clip-path: polygon(0 0, 0% 100%, 100% 0);
+        top: 0px;
+        left: 0px;
+        padding: 5px 6px;
+        max-width: 50px;
+        min-width: 50px;
+        max-height: 50px;
+        min-height: 40px;
+        font-size: 0.9em;
+        background: red;
+        color: #fff;
+    }
 
     &__img {
+        display: block;
         width: 100%;
         height: 214px;
         object-fit: cover;
         border-bottom:  3px solid $tertiary-color;
     }
     &__details {
-        text-align: center;
+       padding: 10px;
         
 
     }
