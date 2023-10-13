@@ -42,9 +42,8 @@ export default function HomePage({onSelectAddCart}) {
   }
   return (
     <>
-    <Main products={products} key={products.id} onSelectAddCart={onSelectAddCart}/>
+    <Main products={products} onSelectAddCart={onSelectAddCart}/>
     </>
   )
   
 }
-
