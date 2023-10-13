@@ -33,14 +33,16 @@ export default function Main({products, onSelectAddCart}) {
         <main className="main">
             <section>
             <div className="nav__filter">
-                <input type="text" className="input__search" onChange={handlerSearchInput} onFocus={() =>  setSearching(true)} onBlur={() => setSearching(false)}placeholder="Type to search"/>
+                <input type="text" className="input__search" onChange={handlerSearchInput} onFocus={() =>  setSearching(true)} placeholder="Type to search"/>
                 <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="select__filter">
                     <option value='input'>Sort By Input order</option>
                     <option value='pricelow'>Price: Low to High</option>
                     <option value='pricehigh'>Price: High to Low</option>
                 </select>
                 </div>
-                {searching && searchItem.map((item) => <ShowSearch item={item} key={item.id} /> )}
+                
+                {searching && <div className="search">{searchItem.map((item) => <ShowSearch item={item} key={item.id} />)}</div>} 
+               
                 <div className="main__home">
                     {sortedItems.map((item) => <Product item={item} key={item.id} onSelectAddCart={onSelectAddCart}/>)}
                 </div>
@@ -48,3 +50,4 @@ export default function Main({products, onSelectAddCart}) {
         </main>
     )
 }
+// {searching && searchItem.map((item) => <ul className="search"><ShowSearch item={item} key={item.id} /></ul>)}

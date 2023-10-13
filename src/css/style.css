@@ -28,6 +28,10 @@ body {
   font-size: 1.6rem;
   color: #DF4C73;
 }
+.heading__small {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+}
 
 .headline__card {
   font-family: "Open Sans", sans-serif;
@@ -207,6 +211,50 @@ body {
   border: none;
   border-radius: 4px;
   background-color: #f1f1f1;
+}
+
+.search {
+  margin: 20px 0;
+  float: right;
+  background-color: #CFCFCF;
+  z-index: 99;
+  position: absolute;
+  border-radius: 3px;
+  border: solid 2px #F2F2F2;
+  padding: 20px;
+  max-width: 100%;
+}
+.search__list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  background-color: white;
+  text-align: center;
+  padding: 10px 16px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  border: 1px #F2F2F2 solid;
+}
+.search__list:last-child {
+  margin: 0;
+}
+.search__list--info {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+.search::after {
+  bottom: 100%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-bottom-color: white;
+  border-width: 8px;
+  margin-left: -8px;
 }
 
 .header__container {
