@@ -10,11 +10,13 @@ export default function ShowSearch({item}) {
     }
     
     return(
-    <li id={id} onClick={()=> handlereClickProduct(id)} className='search__list'>
+    <div id={id} onClick={()=> handlereClickProduct(id)} className='search__list'>
         <img src={imageUrl} alt={title} style={{height: '24px'}}/>
-        <small>{title}</small>
-        <small>{description}</small>
-    </li>
+        <div className='search__list--info'>
+            <small className='heading__small'>{title}</small>
+            <small>{description}</small>
+        </div>
+    </div>
     )
     
 }
