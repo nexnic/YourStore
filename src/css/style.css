@@ -261,6 +261,8 @@ body {
   display: flex;
   min-height: 30vh;
   max-height: 30vh;
+  padding: auto;
+  margin: 4vh;
   justify-content: center;
   align-items: center;
   text-align: center;
