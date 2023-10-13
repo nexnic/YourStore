@@ -40,7 +40,7 @@ export default function Main({products, onSelectAddCart}) {
                     <option value='pricehigh'>Price: High to Low</option>
                 </select>
                 </div>
-                {searching && searchItem.map((item) => <ShowSearch item={item} key={item.id} /> )}
+                {searching && searchItem.map((item) => <ul className="search"><ShowSearch item={item} key={item.id} /></ul> )}
                 <div className="main__home">
                     {sortedItems.map((item) => <Product item={item} key={item.id} onSelectAddCart={onSelectAddCart}/>)}
                 </div>
