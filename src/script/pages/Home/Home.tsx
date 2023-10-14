@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import LoadingScreen from '../../Components/LoadingScreen'
+
 import Main from "./Components/Main";
+import LoadingScreen from "../../Components/Loading/LoadingScreen";
 
 
 export default function HomePage({pageConfig, onSelectAddCart}) {
@@ -16,7 +17,7 @@ export default function HomePage({pageConfig, onSelectAddCart}) {
 
         if(response.status === 200){
           setProducts(...[json])
-          setIsLoading(true)
+          setIsLoading(false)
         }
         if(response.status === 300 >= 400){
           console.log('fail')
