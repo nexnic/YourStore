@@ -1,3 +1,18 @@
-@media screen and (min-width: 200px) {
-    /* change content here */
-}
+@media screen and (min-width: 480px) {
+    
+    .cardCheckout {
+        max-width: 50%;
+    }
+    
+    .cardtotal {
+        min-width: 250px;
+        max-width: 300px;
+    }
+    
+    
+    .checkoutPage__container{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+}   

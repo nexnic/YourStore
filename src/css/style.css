@@ -1,6 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@600&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
-@media screen and (min-width: 200px) {
-  /* change content here */
+@media screen and (min-width: 480px) {
+  .cardCheckout {
+    max-width: 50%;
+  }
+  .cardtotal {
+    min-width: 250px;
+    max-width: 300px;
+  }
+  .checkoutPage__container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 body {
   min-height: 100vh;
@@ -45,6 +55,10 @@ body {
   color: #DF4C73;
   font-family: "Open Sans", sans-serif;
   border-bottom: 2px solid #DF4C73;
+}
+
+.errortext {
+  color: #9E3652;
 }
 
 .btn__primary {
@@ -129,6 +143,46 @@ body {
   padding: 10px;
 }
 
+.cardCheckout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 3px;
+  gap: 0.4rem;
+  margin-bottom: 0.4rem;
+  border: 1px solid black;
+}
+.cardCheckout__img {
+  order: 1;
+  flex: 10%;
+}
+.cardCheckout__info {
+  order: 2;
+  flex: 60%;
+}
+.cardCheckout__amount {
+  order: 3;
+  display: flex;
+  flex-direction: column;
+  flex: 30%;
+}
+.cardCheckout__button {
+  order: 4;
+  flex: 10%;
+}
+
+.cardtotal {
+  background-color: aqua;
+  padding: 25px;
+  border-radius: 10px;
+}
+.cardtotal__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .container {
   margin: auto;
   width: 80%;
@@ -206,7 +260,7 @@ body {
   background-color: #f8f8f8;
   resize: none;
 }
-.input__form[type=text] {
+.input__form {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -224,10 +278,17 @@ body {
   border-radius: 4px;
   box-sizing: border-box;
 }
+.input--invalid {
+  border: 1px solid red;
+}
 
 .image__cart {
   height: 30px;
   width: 30px;
+  object-fit: cover;
+}
+.image__checkout {
+  width: 100%;
   object-fit: cover;
 }
 
@@ -477,6 +538,34 @@ body {
 }
 .productPage__spec {
   order: 4;
+}
+
+.checkoutPage {
+  display: flex;
+  justify-content: center;
+}
+.checkoutPage__container {
+  display: flex;
+  flex-direction: column;
+  gap: 4vh;
+  background-color: white;
+  width: 90%;
+  border-radius: 10px;
+  padding: 1rem;
+}
+.checkoutPage__container--detailts {
+  flex: 60%;
+  display: flex;
+}
+.checkoutPage__container--product {
+  flex: 30%;
+}
+
+.detailts__shipping {
+  flex: 50%;
+}
+.detailts__payment {
+  flex: 50%;
 }
 
 /*# sourceMappingURL=style.css.map */

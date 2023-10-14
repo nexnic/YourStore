@@ -41,3 +41,50 @@
 
     }
 }
+
+.cardCheckout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 3px;
+    gap: .4rem;
+    margin-bottom: 0.4rem;
+    border: 1px solid black;
+
+
+    
+
+    &__img {
+        order: 1;
+        flex: 10%;
+    }
+
+    &__info {
+        order: 2;
+        flex: 60%;
+    }
+    &__amount{
+        order: 3;
+        display: flex;
+        flex-direction: column;
+        flex: 30%;
+    }
+    &__button {
+        order:4;
+        flex: 10%;
+    }
+
+
+}
+
+.cardtotal {
+    background-color: aqua;
+    padding: 25px;
+    border-radius: 10px;
+    &__list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

@@ -1,10 +1,19 @@
-
+import ProductList from './Components/ProductList'
+import CheckoutDetailts from './Components/CheckoutDetails'
 
 export default function CheckoutPage({cart}) {
-    console.log(cart)
+    
     return (
         <main>
-            <section className='Checkout__productList'>
+            <section className='checkoutPage'>
+                <div className='checkoutPage__container'>
+                    <CheckoutDetailts cart={cart} />
+                    <div className='checkoutPage__container--product'>
+                        <h3>Your goods</h3>
+                        <br />
+                        {cart.map((item) => <ul ><ProductList item={item}/></ul> )}
+                    </div>
+                </div>
             </section>
         </main>
     )
