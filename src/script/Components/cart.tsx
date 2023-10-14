@@ -4,7 +4,8 @@ import { Link } from "react-router-dom"
 
 export default function Cart({cart, onSelectEmptyCart,onSelectCartRemoveItem}){
     const [showCart,setShowCart] = useState(false)
-    
+    const totalQuantity = cart.reduce((total, item) => total + item.quantity, 0);
+    console.log('Cart', totalQuantity)
     
     function handleShowCart () {
         setShowCart((show) => !show)
@@ -13,7 +14,7 @@ export default function Cart({cart, onSelectEmptyCart,onSelectCartRemoveItem}){
 
     return (
         <div>
-            <Button Class={'btn__primary'} Type={'button'} onClick={handleShowCart}>cart</Button>
+            <Button Class={'btn__primary'} Type={'button'} onClick={handleShowCart}><i className="fa-solid fa-cart-shopping"></i> {totalQuantity ? totalQuantity : null}</Button>
             {showCart && <CartOpen cart={cart} onSelectEmptyCart={onSelectEmptyCart} onSelectCartRemoveItem={onSelectCartRemoveItem}/>}
         </div>
     )
