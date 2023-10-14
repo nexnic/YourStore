@@ -96,7 +96,7 @@ export default function App() {
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Layout pageConfig={pageConfig} cart={cart} onSelectEmptyCart={handlerEmptyCart} onSelectCartRemoveItem={handlerRemoveItemFromCart}/>}>
-                    <Route index element={<HomePage onSelectAddCart={handlerAddToCart}/>} />
+                    <Route index element={<HomePage pageConfig={pageConfig} onSelectAddCart={handlerAddToCart}/>}  />
                     <Route path="/Aboutus" element={<AboutusPage />} />
                     <Route path="/ContactUs" element={<ContactUspage />}/>
                     <Route path="/product/:id" element={<ProductPage />} />

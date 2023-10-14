@@ -3,7 +3,7 @@ import LoadingScreen from '../../Components/LoadingScreen'
 import Main from "./Components/Main";
 
 
-export default function HomePage({onSelectAddCart}) {
+export default function HomePage({pageConfig, onSelectAddCart}) {
   const [products , setProducts] = useState([])
   const [isLoading, setIsLoading] = useState(true)
 
@@ -16,7 +16,7 @@ export default function HomePage({onSelectAddCart}) {
 
         if(response.status === 200){
           setProducts(...[json])
-          setIsLoading(false)
+          setIsLoading(true)
         }
         if(response.status === 300 >= 400){
           console.log('fail')
@@ -35,8 +35,8 @@ export default function HomePage({onSelectAddCart}) {
 
   if(isLoading) {
     return (
-      <main>
-        <LoadingScreen></LoadingScreen>
+      <main className="main">
+        <LoadingScreen pageConfig={pageConfig}></LoadingScreen>
       </main>
     )
   }
