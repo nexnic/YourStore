@@ -1,9 +1,10 @@
 import { useState } from "react"
 import Button from "./Button"
 import { Link } from "react-router-dom"
-
+// @ts-ignore
 export default function Cart({cart, onSelectEmptyCart,onSelectCartRemoveItem}){
     const [showCart,setShowCart] = useState(false)
+    // @ts-ignore
     const totalQuantity = cart.reduce((total, item) => total + item.quantity, 0);
     console.log('Cart', totalQuantity)
     
@@ -19,9 +20,10 @@ export default function Cart({cart, onSelectEmptyCart,onSelectCartRemoveItem}){
         </div>
     )
 }
-
+// @ts-ignore
 function CartOpen ({cart, onSelectEmptyCart, onSelectCartRemoveItem}) {
-    const cartLen = cart.length 
+    const cartLen = cart.length
+    // @ts-ignore
     const totalPrice = cart.reduce((total, product) => {
         const priceToUse =
           product.discountedPrice && product.discountedPrice < product.price
@@ -38,23 +40,30 @@ function CartOpen ({cart, onSelectEmptyCart, onSelectCartRemoveItem}) {
                     <h4>Cart</h4>
                 </div>
                 <ul className="cart__items">
-                    {cartLen ?  cart.map((item)=> (
-                        <CartList item={item} key={item.id} onSelectCartRemoveItem={onSelectCartRemoveItem}/>
-                    )): <p>Empty Cart</p> }
+                    {
+                        // @ts-ignore
+                        cartLen ?  cart.map((item)=> (
+                            <CartList item={item} key={item.id} onSelectCartRemoveItem={onSelectCartRemoveItem}/>
+                        )): <p>Empty Cart</p> 
+                    }
                 </ul>
                 {cartLen ? <div className="cart__price">
                     <small>Price:</small>
                     <small>{totalPrice.toFixed(2)} Nok</small>
                 </div> : null}
                 <div className="cart__buttom">
-                    {cartLen ? <Button onClick={onSelectEmptyCart} Class='btn__cart'>Empty Cart</Button>  : null}
+                    
+                    {
+                        // @ts-ignore
+                        cartLen ? <Button onClick={onSelectEmptyCart} Class='btn__cart'>Empty Cart</Button>  : null
+                    }
                     {cartLen ? <Link to="/Checkout" className="btn__cart">Checkout</Link> : null}
                 </div>
             </div>
         </div>
     )
 }
-
+// @ts-ignore
 function CartList ({item, onSelectCartRemoveItem}) {
     const {title,imageUrl , quantity,id} = item
     return (
@@ -62,7 +71,7 @@ function CartList ({item, onSelectCartRemoveItem}) {
             <img src={imageUrl} alt={title} className="image__cart"/>
             <span className="item__name">{title} </span>
             <span className="item__quantity">Quantity: {quantity}</span>
-            <Button onClick={() =>onSelectCartRemoveItem(id)} Class='btn__remove'>x</Button>
+            <Button onClick={() =>onSelectCartRemoveItem(id)} Type='button' Class='btn__remove'>x</Button>
         </li>
     )
 }

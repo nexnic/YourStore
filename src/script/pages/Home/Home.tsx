@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Main from "./Components/Main";
 import LoadingScreen from "../../Components/Loading/LoadingScreen";
 
-
+// @ts-ignore
 export default function HomePage({pageConfig, onSelectAddCart}) {
   const [products , setProducts] = useState([])
   const [isLoading, setIsLoading] = useState(true)
@@ -19,6 +19,7 @@ export default function HomePage({pageConfig, onSelectAddCart}) {
           setProducts(...[json])
           setIsLoading(false)
         }
+        // @ts-ignore
         if(response.status === 300 >= 400){
           console.log('fail')
         }

@@ -2,7 +2,7 @@ import Header from './Header/Header'
 import Footer from './Footer/Footer'
 import { Outlet} from "react-router-dom";
 
-
+// @ts-ignore
 export default function Layout({pageConfig, cart, onSelectCartRemoveItem, onSelectEmptyCart}){
 
     

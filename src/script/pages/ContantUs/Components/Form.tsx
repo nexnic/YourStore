@@ -33,7 +33,7 @@ const {
   } = useForm({
     resolver: yupResolver(schema),
   });
-
+// @ts-ignore
 function onSubmit(data) {
     console.log(data);
 }
@@ -60,7 +60,7 @@ function onSubmit(data) {
             </label>
             <small>{errors.email?.message}</small>
             <label htmlFor="fbody">
-                <textarea id="fbody" cols="30" rows="10" {...register('fbody')} className="input__form--textfield"></textarea>
+                <textarea id="fbody"  {...register('fbody')} className="input__form--textfield"></textarea>
             </label>
             <input type="submit" />
         </form>

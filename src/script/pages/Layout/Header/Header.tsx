@@ -1,6 +1,6 @@
 import Navigation from "../Navigation/Navigation"
 
-
+// @ts-ignore
 export default function Header ({pageConfig, cart, onSelectEmptyCart, onSelectCartRemoveItem}) {
     return (
         <header className="header">

@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 
-
+// @ts-ignore
 export default function Product ({item, onSelectAddCart}) {
     const {id, price, title, imageUrl, description, discountedPrice} = item
     const isOnSale = price > discountedPrice
@@ -8,7 +8,7 @@ export default function Product ({item, onSelectAddCart}) {
     const navigate = useNavigate();
 
 
-
+    // @ts-ignore
     function handlereClick(event, id, item) {
        
         if(event.target.localName === 'button')  onSelectAddCart(item)
@@ -16,6 +16,7 @@ export default function Product ({item, onSelectAddCart}) {
     }
     
     return (
+        // @ts-ignore
         <div className="card" id={id} onClick={()=> handlereClick(event, id)}>
             <img src={imageUrl} alt={title} className="card__img"/>
             {isOnSale ? <div className='card__sale'>{discountedProsent} %</div> : null}

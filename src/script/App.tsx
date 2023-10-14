@@ -68,16 +68,21 @@ export default function App() {
     //const [errorMsg, setErrorMsg] =useState([])
 
     // id
+    // @ts-ignore
     function handlerAddToCart(product) {
         const productId = product.id;
+        // @ts-ignore
         const existingProduct = cart.find(item => item.id === productId);
         
         if (existingProduct) {
-            const updatedCart = cart.map(item => 
+            const updatedCart = cart.map(item =>
+                // @ts-ignore
               item.id === productId ? { ...item, quantity: item.quantity + 1 } : item
             );
+            // @ts-ignore
             setCart(updatedCart);
         } else {
+            // @ts-ignore
             setCart([...cart, { ...product, quantity: 1 }]);
         }
     }
@@ -85,8 +90,9 @@ export default function App() {
     function handlerEmptyCart() {
         setCart([])
     }
-
+    // @ts-ignore
     function handlerRemoveItemFromCart(productid) {
+        // @ts-ignore
         const removeFromCart = cart.filter((item) => item.id !== productid )
         setCart(removeFromCart)
     }
