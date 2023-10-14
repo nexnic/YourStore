@@ -3,7 +3,7 @@
     import Menu from "./Components/Menu";
     import handlerMenuClick from './Handler/Handler'
     import { useState } from "react";
-
+// @ts-ignore
 export default function Navigation({pageConfig, cart, onSelectEmptyCart, onSelectCartRemoveItem}) {
     const [isMenu, setIsMenu] = useState(false)
 

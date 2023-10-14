@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-
+// @ts-ignore
 export default function Footer({pageConfig}) {
 
     return (

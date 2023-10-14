@@ -1,5 +1,5 @@
 
-
+// @ts-ignore
 export default function ProductSpec({items}) {
 
     

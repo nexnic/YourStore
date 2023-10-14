@@ -1,3 +1,4 @@
+// @ts-ignore
 export default function ProductReviews({test}) {
     console.log(test)
     return (

@@ -28,7 +28,8 @@ export default function ProductPage () {
                 console.log(error)
             }
         }getProduct()
-    },[])
+    
+    }, [])
 
     if(isLoading){
         <div>Loading</div>

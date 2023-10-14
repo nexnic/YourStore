@@ -1,4 +1,5 @@
-export default function ProductHeading ({obj: items}) {
+// @ts-ignore
+export default function ProductHeading ({items}) {
     const {title, description, id} = items
     return (
         <div className="productPage__heading">

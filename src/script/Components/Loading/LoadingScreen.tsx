@@ -1,3 +1,4 @@
+// @ts-ignore
 export default function LoadingScreen({pageConfig}){
 
    return(

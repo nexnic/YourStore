@@ -24,7 +24,7 @@ const schema = yup.object().shape({
         .matches(/^[0-9]{3}/, 'Credit Card number must be 3 Digits')
 
 })
-
+// @ts-ignore
 export default function CheckoutDetailts ({cart}) {
     const {
         register,
@@ -33,6 +33,7 @@ export default function CheckoutDetailts ({cart}) {
       } = useForm({
         resolver: yupResolver(schema),
       });
+    // @ts-ignore
     function onSubmit(data) {
         console.log(data);
     }

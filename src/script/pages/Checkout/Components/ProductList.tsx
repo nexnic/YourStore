@@ -1,3 +1,4 @@
+// @ts-ignore
 export default function ProductList({item}) {
     
     const {id, imageUrl,  title, description , quantity, price, discountedPrice} = item

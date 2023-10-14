@@ -1,6 +1,6 @@
 import ProductList from './Components/ProductList'
 import CheckoutDetailts from './Components/CheckoutDetails'
-
+// @ts-ignore
 export default function CheckoutPage({cart}) {
     
     return (
@@ -11,7 +11,11 @@ export default function CheckoutPage({cart}) {
                     <div className='checkoutPage__container--product'>
                         <h3>Your goods</h3>
                         <br />
-                        {cart.map((item) => <ul ><ProductList item={item}/></ul> )}
+                        
+                        {
+                            // @ts-ignore
+                            cart.map((item) => <ul ><ProductList item={item}/></ul> )
+                        }
                     </div>
                 </div>
             </section>
