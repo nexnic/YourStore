@@ -1,14 +1,19 @@
-
+import ProductList from './Components/ProductList'
 import CheckoutDetailts from './Components/CheckoutDetails'
-import CheckoutList from './Components/CheckoutList'
 
 export default function CheckoutPage({cart}) {
-
+    
     return (
         <main>
-            <section className='Checkout__productList'>
-            <CheckoutDetailts/>
-            <CheckoutList cart={cart}/> 
+            <section className='checkoutPage'>
+                <div className='checkoutPage__container'>
+                    <CheckoutDetailts cart={cart} />
+                    <div className='checkoutPage__container--product'>
+                        <h3>Your goods</h3>
+                        <br />
+                        {cart.map((item) => <ul ><ProductList item={item}/></ul> )}
+                    </div>
+                </div>
             </section>
         </main>
     )

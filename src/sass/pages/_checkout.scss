@@ -1,0 +1,32 @@
+.checkoutPage{
+    display: flex;
+    justify-content: center;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 4vh;
+        background-color: $bgColor;
+        width: 90%;
+        border-radius: 10px;
+        padding: 1rem;
+
+        &--detailts {
+            flex: 60%;
+            display: flex;
+        }
+
+        &--product{
+            flex:30%;
+        }
+    }
+}
+
+.detailts{
+    &__shipping {
+        flex: 50%;
+    }
+    &__payment {
+        flex: 50%;
+    }
+}

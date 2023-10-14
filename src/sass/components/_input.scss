@@ -22,7 +22,7 @@
         }
     }
 
-    &__form[type=text] {
+    &__form {
         width: 100%;
         padding: 12px 20px;
         margin: 8px 0;
@@ -30,6 +30,8 @@
         border: 1px solid #ccc;
         border-radius: 4px;
         box-sizing: border-box;
+
+        
     }
     &__form[type=email] {
         width: 100%;
@@ -39,6 +41,10 @@
         border: 1px solid #ccc;
         border-radius: 4px;
         box-sizing: border-box;
+    }
+
+    &--invalid {
+        border: 1px solid red;
     }
 
 } 
