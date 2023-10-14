@@ -31,7 +31,7 @@ export default function Main({products, onSelectAddCart}) {
 
     return (
         <main className="main">
-            <section>
+            <div>
             <div className="nav__filter">
                 <input type="text" className="input__search" onChange={handlerSearchInput} onFocus={() =>  setSearching(true)} placeholder="Type to search"/>
                 <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="select__filter">
@@ -46,7 +46,7 @@ export default function Main({products, onSelectAddCart}) {
                 <div className="main__home">
                     {sortedItems.map((item) => <Product item={item} key={item.id} onSelectAddCart={onSelectAddCart}/>)}
                 </div>
-            </section>
+            </div>
         </main>
     )
 }
