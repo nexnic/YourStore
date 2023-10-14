@@ -44,7 +44,7 @@ function CartOpen ({cart, onSelectEmptyCart, onSelectCartRemoveItem}) {
                 </ul>
                 {cartLen ? <div className="cart__price">
                     <small>Price:</small>
-                    <small>{totalPrice} Nok</small>
+                    <small>{totalPrice.toFixed(2)} Nok</small>
                 </div> : null}
                 <div className="cart__buttom">
                     {cartLen ? <Button onClick={onSelectEmptyCart} Class='btn__cart'>Empty Cart</Button>  : null}
