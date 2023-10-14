@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
-import LoadingScreen from '../../Components/LoadingScreen'
+
 import Main from "./Components/Main";
+import LoadingScreen from "../../Components/Loading/LoadingScreen";
 
 
-export default function HomePage({onSelectAddCart}) {
+export default function HomePage({pageConfig, onSelectAddCart}) {
   const [products , setProducts] = useState([])
   const [isLoading, setIsLoading] = useState(true)
 
@@ -35,8 +36,8 @@ export default function HomePage({onSelectAddCart}) {
 
   if(isLoading) {
     return (
-      <main>
-        <LoadingScreen></LoadingScreen>
+      <main className="main">
+        <LoadingScreen pageConfig={pageConfig}></LoadingScreen>
       </main>
     )
   }
