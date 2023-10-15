@@ -12,7 +12,10 @@ export default function ProductSpec({items}) {
                 </div>
                 <div>
                     <h3>Reviews</h3>
-                    {reviews ? <ul>{reviews.map((review) => <ProductReviews review={review} key={review.id}/> )} </ul> : <p> No Review</p>}
+                    {
+                    // @ts-ignore
+                    reviews ? <ul>{reviews.map((review) => <ProductReviews review={review} key={review.id}/> )} </ul> : <p> No Review</p>
+                    }
                 </div>
         </div>
     )
