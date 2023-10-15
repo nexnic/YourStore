@@ -1,12 +1,11 @@
 import Info from "./Components/Info"
 import ContactForm from "./Components/ContactForm"
 import Form from "./Components/Form"
-
-export default function ContactUspage() {
-
+// @ts-ignore
+export default function ContactUspage({pageConfig}) {
+    document.title = `${pageConfig[0].CompanyName} | Contact US`;
     return (
         <div>
-            <div>Headline</div>
             <Info/>
             <ContactForm/>
             <Form></Form>

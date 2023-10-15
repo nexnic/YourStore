@@ -7,10 +7,12 @@ import ProductMainInfo from './Components/ProductMainInfo';
 import ProductSpec from './Components/ProductSpec';
 
 
+
 // @ts-ignore
-export default function ProductPage ({onSelectAddCart}) {
+export default function ProductPage ({onSelectAddCart, pageConfig}) {
     const [items, setItems] = useState([])
     const [isLoading, setIsLoading] = useState(true);
+   
 
     const {id} = useParams()
     useEffect(()=> {
@@ -38,8 +40,9 @@ export default function ProductPage ({onSelectAddCart}) {
 
     return (
         <main className="main">
+            
             <section className="productPage">
-                <ProductHeading items={items} />
+                <ProductHeading items={items} pageConfig={pageConfig}/>
                 <ProductImage items={items} />
                 <ProductMainInfo items={items} onSelectAddCart={onSelectAddCart}/>
                 <ProductSpec items={items} />

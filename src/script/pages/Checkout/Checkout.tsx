@@ -3,8 +3,9 @@ import CheckoutDetailts from './Components/CheckoutDetails'
 import { useState } from 'react'
 import Ordercomplet from './Components/OrderComplet'
 // @ts-ignore
-export default function CheckoutPage({cart, onSelectEmptyCart, onSelectCartRemoveItem}) {
+export default function CheckoutPage({cart, onSelectEmptyCart, onSelectCartRemoveItem, pageConfig}) {
     const [order, setOrder] = useState(true)
+    document.title = `${pageConfig[0].CompanyName} | Checkout`;
     // @ts-ignore
     function handlerComplet (){
         setOrder(false)
