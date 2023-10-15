@@ -1,9 +1,11 @@
+
 // @ts-ignore
-export default function ProductHeading ({items}) {
+export default function ProductHeading ({items,pageConfig}) {
+
     const {title, description, id, rating} = items
     const maxRating = 5;
     const activeRating = rating
-    
+    document.title = `${pageConfig[0].CompanyName} | ${title}`;
 
     return (
         <div className="productPage__heading">

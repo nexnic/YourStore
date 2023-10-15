@@ -103,10 +103,10 @@ export default function App() {
             <Routes>
                 <Route path="/" element={<Layout pageConfig={pageConfig} cart={cart} onSelectEmptyCart={handlerEmptyCart} onSelectCartRemoveItem={handlerRemoveItemFromCart}/>}>
                     <Route index element={<HomePage pageConfig={pageConfig} onSelectAddCart={handlerAddToCart}/>}  />
-                    <Route path="/Aboutus" element={<AboutusPage />} />
-                    <Route path="/ContactUs" element={<ContactUspage />}/>
-                    <Route path="/product/:id" element={<ProductPage onSelectAddCart={handlerAddToCart} />} />
-                    <Route path="/checkout" element={<CheckoutPage cart={cart} onSelectEmptyCart={handlerEmptyCart} onSelectCartRemoveItem={handlerRemoveItemFromCart}/>} />
+                    <Route path="/Aboutus" element={<AboutusPage  pageConfig={pageConfig}/>} />
+                    <Route path="/ContactUs" element={<ContactUspage  pageConfig={pageConfig}/>}/>
+                    <Route path="/product/:id" element={<ProductPage  pageConfig={pageConfig} onSelectAddCart={handlerAddToCart} />} />
+                    <Route path="/checkout" element={<CheckoutPage  pageConfig={pageConfig} cart={cart} onSelectEmptyCart={handlerEmptyCart} onSelectCartRemoveItem={handlerRemoveItemFromCart}/>} />
                     <Route path="*" element={<PageNotFound />} />
                 </Route>
             </Routes>

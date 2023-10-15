@@ -7,7 +7,7 @@ import LoadingScreen from "../../Components/Loading/LoadingScreen";
 export default function HomePage({pageConfig, onSelectAddCart}) {
   const [products , setProducts] = useState([])
   const [isLoading, setIsLoading] = useState(true)
-
+  document.title = `${pageConfig[0].CompanyName} | Home`;
 
   useEffect(() => {
     async function getItem() {
