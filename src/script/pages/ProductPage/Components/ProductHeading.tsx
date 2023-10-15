@@ -11,7 +11,9 @@ export default function ProductHeading ({items}) {
                 <p>{description}</p>
                 <small>Item number: {id}</small>
                 <p>
-                    {[...new Array(maxRating)].map((arr , index)=> {
+                    {
+                    // @ts-ignore
+                    [...new Array(maxRating)].map((arr , index)=> {
                         return index < activeRating ? <i className="fa-star fa-solid" style={{color: '#DF4C73'}}></i> : <i className="fa-star fa-solid" style={{color: '#B3B3B3'}}></i>
                     })}
                 </p>
