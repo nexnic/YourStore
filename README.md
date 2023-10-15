@@ -1,27 +1,74 @@
-# React + TypeScript + Vite
+# YourStore
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description 
+This is a School Project on an E-commerce Site built with React. This project, but it was not time to try to build the best user interface. 
 
-Currently, two official plugins are available:
+## Built With
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Here, you can find tech waste used to build this site.
 
-## Expanding the ESLint configuration
+- [React](https://react.dev/)
+- [typescript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [sass](https://sass-lang.com/)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Getting Started
 
-- Configure the top-level `parserOptions` property like this:
+   Before installing or building the system, I want to make more defaults like the name of the company and slogan, info, but it's not perfect jet. 
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+   ### Default Setting 
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+      You can change the Page name and slogan, but it is not perfect in version 1. In version 2, this will be built more after delivery.
+
+      Inside App.tsx, you can change the name and default name on the page. 
+
+      Example 
+
+      ```
+         const pageConfig = [
+            {
+               CompanyName: 'YourStore',
+               CompanySlogen: 'Your One-Stop Online Shop for All Your Needs.',
+               email: 'post@yourstore.no',
+               telefon: '3322 2222',
+               logo: null,
+               headerBackgroundImage: null,
+            }
+         ]
+      ```
+
+   ### Installing
+
+   **requirement**  
+   -[nodejs](https://nodejs.org/en)
+
+   First thing you need is Clone the Repo
+
+   ```
+   git clone git@github.com:nexnic/YourStore.git 
+   ```
+
+   ### Getting started
+
+   You can change the code, then need to install node-modules before changing some thing
+   
+   ```
+   npm run update
+   ```
+   
+   **Run Local**
+
+   Run this on your local network.
+
+   ```
+   npm run dev   
+   ```
+
+   **Sass**
+
+   When changing something inside the sass, You need to run the compiler for sass. 
+   ```
+   npm run sass
+   ```
+
