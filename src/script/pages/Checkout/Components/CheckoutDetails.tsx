@@ -25,7 +25,7 @@ const schema = yup.object().shape({
 
 })
 // @ts-ignore
-export default function CheckoutDetailts ({cart}) {
+export default function CheckoutDetailts ({cart, handlerComplet}) {
     const {
         register,
         handleSubmit,
@@ -36,6 +36,7 @@ export default function CheckoutDetailts ({cart}) {
     // @ts-ignore
     function onSubmit(data) {
         console.log(data);
+        handlerComplet()
     }
       
 
@@ -77,7 +78,7 @@ export default function CheckoutDetailts ({cart}) {
                 </div>
                 
                 <TotalPrice cart={cart} key={cart.id}/>
-                <input type="submit" />
+                <input type="submit" className='btn__primary'/>
             </form>
         </div>
     )

@@ -1,5 +1,5 @@
 // @ts-ignore
-export default function ProductList({item}) {
+export default function ProductList({item, onSelectCartRemoveItem}) {
     
     const {id, imageUrl,  title, description , quantity, price, discountedPrice} = item
     const isOnSale = price > discountedPrice
@@ -17,7 +17,7 @@ export default function ProductList({item}) {
                 {isOnSale ?  <small>per piece {discountedPrice} ,- </small>: <small>per piece {price} ,-</small>}
             </div>
             <div className="cardCheckout__button">
-                <button className="btn__remove">X</button>
+                <button className="btn__remove" onClick={()=> onSelectCartRemoveItem (id)}>X</button>
             </div>
         </li>
     )
