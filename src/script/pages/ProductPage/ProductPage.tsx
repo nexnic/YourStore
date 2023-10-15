@@ -6,8 +6,8 @@ import ProductImage from './Components/ProductImage';
 import ProductMainInfo from './Components/ProductMainInfo';
 import ProductSpec from './Components/ProductSpec';
 
-
-export default function ProductPage () {
+// @ts-ignore
+export default function ProductPage ({onSelectAddCart}) {
     const [items, setItems] = useState([])
     const [isLoading, setIsLoading] = useState(true);
 
@@ -40,7 +40,7 @@ export default function ProductPage () {
             <section className="productPage">
                 <ProductHeading items={items} />
                 <ProductImage items={items} />
-                <ProductMainInfo items={items} />
+                <ProductMainInfo items={items} onSelectAddCart={onSelectAddCart}/>
                 <ProductSpec items={items} />
                 <div className="main__product--reviews"></div>
             </section>
