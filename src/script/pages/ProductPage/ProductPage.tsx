@@ -42,9 +42,7 @@ export default function ProductPage ({onSelectAddCart}) {
                 <ProductImage items={items} />
                 <ProductMainInfo items={items} onSelectAddCart={onSelectAddCart}/>
                 <ProductSpec items={items} />
-                <div className="main__product--reviews">
-                    
-                </div>
+                <div className="main__product--reviews"></div>
             </section>
         </main>
             
