@@ -1,6 +1,6 @@
 import Button from '../../../Components/Button'
 // @ts-ignore
-export default function ProductMainInfo({items}){
+export default function ProductMainInfo({items, onSelectAddCart}){
     console.log(items)
     const productPrice = items.price
     const productdiscounted = items.discountedPrice
@@ -13,7 +13,7 @@ export default function ProductMainInfo({items}){
             {isDiscounted ? <small>{productdiscounted}</small> : null}
             <p>{productPrice}</p>
             
-            <Button Class='btn__buy' Type='button'onClick='noting'>Add to cart</Button>
+            <Button Class='btn__buy' Type='button'onClick={()=> onSelectAddCart(items)}>Add to cart</Button>
         </div>
     )
 }
