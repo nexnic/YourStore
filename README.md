@@ -1,7 +1,11 @@
 # YourStore
+![image](./Live-version.png)
 
 ## Description 
-This is a School Project on an E-commerce Site built with React. This project, but it was not time to try to build the best user interface. 
+YouStore his is e-commerce site build with React. This project has filter for price and cart and checkout function. This was a School project from noroff has a setting for change the company name and slogen and more.  
+
+"Demo Version"
+- [Live-Version](https://musical-starship-3a4938.netlify.app/)
 
 ## Built With
 
@@ -10,7 +14,7 @@ Here, you can find tech waste used to build this site.
 - [React](https://react.dev/)
 - [typescript](https://www.typescriptlang.org/)
 - [Vite](https://vitejs.dev/)
-- [sass](https://sass-lang.com/)
+- [Sass](https://sass-lang.com/)
 
 ## Getting Started
 
